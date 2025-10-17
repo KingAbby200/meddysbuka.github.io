@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Meddy's Africana Buka</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1 style="display: flex; align-items: center;"><img src="/images/meddys.jpg" width="200px"> <!-- <span class="highlight">Africana Buka</span> --></h1>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html" class="active">Menu</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#branches">Branches</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="#order" class="btn-order">Order Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="menu-hero">
+        <h1>Our <span>Menu</span></h1>
+        <p>Discover our delicious selection of dishes</p>
+    </section>
+
+    <section class="menu-section">
+        <div class="container">
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">All Items</button>
+                <button class="category-btn" data-category="african">African Delicacies</button>
+                <button class="category-btn" data-category="intercontinental">Intercontinental</button>
+                <button class="category-btn" data-category="pastries">Pastries</button>
+                <button class="category-btn" data-category="grills">Grilled Treats</button>
+            </div>
+
+            <div class="category-section" id="african-section">
+                <h2 class="category-title"><i class="fas fa-fire"></i> African Delicacies</h2>
+                <div class="menu-grid">
+                    <div class="menu-item" data-category="african" data-name="Jollof Rice with Chicken" data-price="3500">
+                        <div class="menu-item-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Jollof_Rice_with_Stew.jpg/800px-Jollof_Rice_with_Stew.jpg" alt="Jollof Rice">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Jollof Rice with Chicken</h3>
+                            <p class="menu-item-desc">Classic Nigerian jollof rice served with grilled chicken</p>
+                            <p class="menu-item-price">₦3,500</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="african" data-name="Pounded Yam & Egusi Soup" data-price="4000">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=800&h=500&fit=crop" alt="Pounded Yam">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Pounded Yam & Egusi Soup</h3>
+                            <p class="menu-item-desc">Smooth pounded yam with rich egusi soup and assorted meat</p>
+                            <p class="menu-item-price">₦4,000</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="african" data-name="Fried Rice with Beef" data-price="3500">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400" alt="Fried Rice">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Fried Rice with Beef</h3>
+                            <p class="menu-item-desc">Colorful fried rice with vegetables and tender beef</p>
+                            <p class="menu-item-price">₦3,500</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="african" data-name="Amala & Ewedu with Goat Meat" data-price="4500">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1626804475297-41608ea09aeb?w=400" alt="Amala">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Amala & Ewedu with Goat Meat</h3>
+                            <p class="menu-item-desc">Traditional amala served with ewedu and tender goat meat</p>
+                            <p class="menu-item-price">₦4,500</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="african" data-name="Ofada Rice & Ayamase Sauce" data-price="4200">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=400" alt="Ofada Rice">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Ofada Rice & Ayamase Sauce</h3>
+                            <p class="menu-item-desc">Local ofada rice with spicy designer stew</p>
+                            <p class="menu-item-price">₦4,200</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="african" data-name="Pepper Soup" data-price="3000">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400" alt="Pepper Soup">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Pepper Soup</h3>
+                            <p class="menu-item-desc">Spicy Nigerian pepper soup with assorted meat</p>
+                            <p class="menu-item-price">₦3,000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section" id="intercontinental-section">
+                <h2 class="category-title"><i class="fas fa-globe"></i> Intercontinental Dishes</h2>
+                <div class="menu-grid">
+                    <div class="menu-item" data-category="intercontinental" data-name="Spaghetti Bolognese" data-price="3800">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=400" alt="Spaghetti">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Spaghetti Bolognese</h3>
+                            <p class="menu-item-desc">Italian pasta with rich meat sauce</p>
+                            <p class="menu-item-price">₦3,800</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="intercontinental" data-name="Grilled Chicken Wings" data-price="3500">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1608039829572-78524f79c4c7?w=400" alt="Chicken Wings">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Grilled Chicken Wings</h3>
+                            <p class="menu-item-desc">Seasoned and grilled to perfection</p>
+                            <p class="menu-item-price">₦3,500</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="intercontinental" data-name="Beef Burger with Fries" data-price="4000">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400" alt="Burger">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Beef Burger with Fries</h3>
+                            <p class="menu-item-desc">Juicy beef burger with crispy fries</p>
+                            <p class="menu-item-price">₦4,000</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="intercontinental" data-name="Chicken Caesar Salad" data-price="3200">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1546793665-c74683f339c1?w=400" alt="Caesar Salad">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Chicken Caesar Salad</h3>
+                            <p class="menu-item-desc">Fresh greens with grilled chicken and caesar dressing</p>
+                            <p class="menu-item-price">₦3,200</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="intercontinental" data-name="Fish & Chips" data-price="4500">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1579208575657-c595a05383b7?w=400" alt="Fish and Chips">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Fish & Chips</h3>
+                            <p class="menu-item-desc">Crispy battered fish with golden fries</p>
+                            <p class="menu-item-price">₦4,500</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="intercontinental" data-name="Grilled Tilapia" data-price="5000">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=400" alt="Grilled Tilapia">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Grilled Tilapia</h3>
+                            <p class="menu-item-desc">Whole tilapia grilled with special spices</p>
+                            <p class="menu-item-price">₦5,000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section" id="pastries-section">
+                <h2 class="category-title"><i class="fas fa-bread-slice"></i> Fresh Pastries</h2>
+                <div class="menu-grid">
+                    <div class="menu-item" data-category="pastries" data-name="Meat Pie" data-price="800">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1618164436241-4473940d1f5c?w=400" alt="Meat Pie">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Meat Pie</h3>
+                            <p class="menu-item-desc">Flaky pastry filled with seasoned minced meat</p>
+                            <p class="menu-item-price">₦800</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="pastries" data-name="Sausage Roll" data-price="700">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1629978445441-d0ca48601b52?w=400" alt="Sausage Roll">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Sausage Roll</h3>
+                            <p class="menu-item-desc">Golden pastry wrapped around juicy sausage</p>
+                            <p class="menu-item-price">₦700</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="pastries" data-name="Chicken Pie" data-price="900">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400" alt="Chicken Pie">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Chicken Pie</h3>
+                            <p class="menu-item-desc">Savory pastry with chicken filling</p>
+                            <p class="menu-item-price">₦900</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="pastries" data-name="Doughnut" data-price="500">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400" alt="Doughnut">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Doughnut</h3>
+                            <p class="menu-item-desc">Soft, fluffy doughnut with sugar coating</p>
+                            <p class="menu-item-price">₦500</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="pastries" data-name="Croissant" data-price="1200">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400" alt="Croissant">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Croissant</h3>
+                            <p class="menu-item-desc">Buttery, flaky French pastry</p>
+                            <p class="menu-item-price">₦1,200</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="pastries" data-name="Chocolate Cake Slice" data-price="1500">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400" alt="Chocolate Cake">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Chocolate Cake Slice</h3>
+                            <p class="menu-item-desc">Rich, moist chocolate cake</p>
+                            <p class="menu-item-price">₦1,500</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="pastries" data-name="Puff Puff" data-price="300">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1626776876729-bab4e5a8f982?w=400" alt="Puff Puff">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Puff Puff (3pcs)</h3>
+                            <p class="menu-item-desc">Sweet Nigerian fried dough balls</p>
+                            <p class="menu-item-price">₦300</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="pastries" data-name="Chin Chin" data-price="600">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1599785209707-a456fc1337bb?w=400" alt="Chin Chin">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Chin Chin (Pack)</h3>
+                            <p class="menu-item-desc">Crunchy Nigerian snack</p>
+                            <p class="menu-item-price">₦600</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="category-section" id="grills-section">
+                <h2 class="category-title"><i class="fas fa-fire"></i> African Delicacies</h2>
+                <div class="menu-grid">
+                    <div class="menu-item" data-category="grills" data-name="Shawarma" data-price="3500">
+                        <div class="menu-item-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Jollof_Rice_with_Stew.jpg/800px-Jollof_Rice_with_Stew.jpg" alt="Jollof Rice">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Jollof Rice with Chicken</h3>
+                            <p class="menu-item-desc">Classic Nigerian jollof rice served with grilled chicken</p>
+                            <p class="menu-item-price">₦3,500</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="african" data-name="Pounded Yam & Egusi Soup" data-price="4000">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=800&h=500&fit=crop" alt="Pounded Yam">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Pounded Yam & Egusi Soup</h3>
+                            <p class="menu-item-desc">Smooth pounded yam with rich egusi soup and assorted meat</p>
+                            <p class="menu-item-price">₦4,000</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="african" data-name="Fried Rice with Beef" data-price="3500">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400" alt="Fried Rice">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Fried Rice with Beef</h3>
+                            <p class="menu-item-desc">Colorful fried rice with vegetables and tender beef</p>
+                            <p class="menu-item-price">₦3,500</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="african" data-name="Amala & Ewedu with Goat Meat" data-price="4500">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1626804475297-41608ea09aeb?w=400" alt="Amala">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Amala & Ewedu with Goat Meat</h3>
+                            <p class="menu-item-desc">Traditional amala served with ewedu and tender goat meat</p>
+                            <p class="menu-item-price">₦4,500</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="african" data-name="Ofada Rice & Ayamase Sauce" data-price="4200">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=400" alt="Ofada Rice">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Ofada Rice & Ayamase Sauce</h3>
+                            <p class="menu-item-desc">Local ofada rice with spicy designer stew</p>
+                            <p class="menu-item-price">₦4,200</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="african" data-name="Pepper Soup" data-price="3000">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400" alt="Pepper Soup">
+                            <button class="add-to-order" onclick="addToOrder(this)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="menu-item-info">
+                            <h3>Pepper Soup</h3>
+                            <p class="menu-item-desc">Spicy Nigerian pepper soup with assorted meat</p>
+                            <p class="menu-item-price">₦3,000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="order-section">
+        <div class="container">
+            <h2 class="section-title">Place Your <span>Order</span></h2>
+            <p class="section-subtitle">Order as shown in menu images or create a custom order below</p>
+            
+            <div class="order-container">
+                <div class="order-summary" id="orderSummary">
+                    <h3><i class="fas fa-shopping-cart"></i> Your Order</h3>
+                    <div id="orderItems" class="order-items">
+                        <p class="empty-cart">Your cart is empty. Select items below or from the menu above!</p>
+                    </div>
+                    <div class="order-total" id="orderTotal" style="display: none;">
+                        <strong>Total:</strong> <span id="totalAmount">₦0</span>
+                    </div>
+                </div>
+
+                <form class="order-form" id="orderForm">
+                    <h3 class="form-section-title"><i class="fas fa-utensils"></i> Select Items</h3>
+                    
+                    <div class="menu-selection">
+                        <div class="menu-category">
+                            <h4 class="category-header"><i class="fas fa-bowl-rice"></i> Soups</h4>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="egusi" data-price="1500" data-name="Egusi Soup">
+                                <label for="egusi">Egusi Soup <span class="item-price">₦1,500</span></label>
+                            </div>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="ewedu" data-price="1200" data-name="Ewedu Soup">
+                                <label for="ewedu">Ewedu Soup <span class="item-price">₦1,200</span></label>
+                            </div>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="banga" data-price="1800" data-name="Banga Soup">
+                                <label for="banga">Banga Soup <span class="item-price">₦1,800</span></label>
+                            </div>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="vegetable" data-price="1400" data-name="Vegetable Soup">
+                                <label for="vegetable">Vegetable Soup <span class="item-price">₦1,400</span></label>
+                            </div>
+                        </div>
+
+                        <div class="menu-category">
+                            <h4 class="category-header"><i class="fas fa-drumstick-bite"></i> Swallow</h4>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="pounded-yam" data-price="1000" data-name="Pounded Yam">
+                                <label for="pounded-yam">Pounded Yam <span class="item-price">₦1,000</span></label>
+                            </div>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="eba" data-price="500" data-name="Eba">
+                                <label for="eba">Eba <span class="item-price">₦500</span></label>
+                            </div>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="amala" data-price="700" data-name="Amala">
+                                <label for="amala">Amala <span class="item-price">₦700</span></label>
+                            </div>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="fufu" data-price="800" data-name="Fufu">
+                                <label for="fufu">Fufu <span class="item-price">₦800</span></label>
+                            </div>
+                        </div>
+
+                        <div class="menu-category">
+                            <h4 class="category-header"><i class="fas fa-fish"></i> Protein</h4>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="goat-meat" data-price="2000" data-name="Goat Meat">
+                                <label for="goat-meat">Goat Meat <span class="item-price">₦2,000</span></label>
+                            </div>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="beef" data-price="1500" data-name="Beef">
+                                <label for="beef">Beef <span class="item-price">₦1,500</span></label>
+                            </div>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="chicken" data-price="1800" data-name="Chicken">
+                                <label for="chicken">Chicken <span class="item-price">₦1,800</span></label>
+                            </div>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="turkey" data-price="2500" data-name="Turkey">
+                                <label for="turkey">Turkey <span class="item-price">₦2,500</span></label>
+                            </div>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="egg" data-price="300" data-name="Egg">
+                                <label for="egg">Egg <span class="item-price">₦300</span></label>
+                            </div>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="fish" data-price="2000" data-name="Fish">
+                                <label for="fish">Fish <span class="item-price">₦2,000</span></label>
+                            </div>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="plantain" data-price="500" data-name="Plantain">
+                                <label for="plantain">Plantain <span class="item-price">₦500</span></label>
+                            </div>
+                        </div>
+
+                        <div class="menu-category">
+                            <h4 class="category-header"><i class="fas fa-hamburger"></i> Food</h4>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="asun-rice" data-price="3000" data-name="Asun Rice">
+                                <label for="asun-rice">Asun Rice <span class="item-price">₦3,000</span></label>
+                            </div>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="white-rice" data-price="1500" data-name="White Rice">
+                                <label for="white-rice">White Rice <span class="item-price">₦1,500</span></label>
+                            </div>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="chinese-rice" data-price="2500" data-name="Chinese Rice">
+                                <label for="chinese-rice">Chinese Rice <span class="item-price">₦2,500</span></label>
+                            </div>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="spaghetti" data-price="2000" data-name="Spaghetti">
+                                <label for="spaghetti">Spaghetti <span class="item-price">₦2,000</span></label>
+                            </div>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="asun-spaghetti" data-price="2800" data-name="Asun Spaghetti">
+                                <label for="asun-spaghetti">Asun Spaghetti <span class="item-price">₦2,800</span></label>
+                            </div>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="beans" data-price="1200" data-name="Beans">
+                                <label for="beans">Beans <span class="item-price">₦1,200</span></label>
+                            </div>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="porridge" data-price="1500" data-name="Porridge">
+                                <label for="porridge">Porridge <span class="item-price">₦1,500</span></label>
+                            </div>
+                        </div>
+
+                        <div class="menu-category">
+                            <h4 class="category-header"><i class="fas fa-bread-slice"></i> Pastry</h4>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="bread" data-price="400" data-name="Bread">
+                                <label for="bread">Bread <span class="item-price">₦400</span></label>
+                            </div>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="meat-pie" data-price="800" data-name="Meat Pie">
+                                <label for="meat-pie">Meat Pie <span class="item-price">₦800</span></label>
+                            </div>
+                            <div class="item-checkbox">
+                                <input type="checkbox" id="chicken-pie" data-price="900" data-name="Chicken Pie">
+                                <label for="chicken-pie">Chicken Pie <span class="item-price">₦900</span></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="form-section-title"><i class="fas fa-user"></i> Your Details</h3>
+
+                    <div class="form-group">
+                        <label for="customerName">Your Name *</label>
+                        <input type="text" id="customerName" name="customerName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerPhone">Phone Number *</label>
+                        <input type="tel" id="customerPhone" name="customerPhone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="branch">Select Branch *</label>
+                        <select id="branch" name="branch" required>
+                            <option value="">Choose a branch...</option>
+                            <option value="Egbeda">Egbeda Branch</option>
+                            <option value="Cement Bus Stop">Cement Bus Stop Branch</option>
+                            <option value="Baruwa">Baruwa Branch</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="deliveryAddress">Delivery Address *</label>
+                        <textarea id="deliveryAddress" name="deliveryAddress" rows="3" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="specialInstructions">Special Instructions (Optional)</label>
+                        <textarea id="specialInstructions" name="specialInstructions" rows="2"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fab fa-whatsapp"></i> Send Order via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in <span>Touch</span></h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>0801 234 5678</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>info@meddysafricanabuka.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>0812 762 9913</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Meddy's Africana Buka. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

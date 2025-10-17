@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meddy's Africana Buka - Authentic African Cuisine</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1 style="display: flex; align-items: center;"><img src="/images/meddys.jpg" width="200px"> <!-- <span class="highlight">Africana Buka</span> --></h1>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#branches">Branches</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="menu.html#order" class="btn-order">Order Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to <span>Meddy's Africana Buka</span></h1>
+            <h2 class="hero-subtitle">Crave It. Taste It. Love It.</h2>
+            <p class="hero-description">Experience the rich flavors of Africa with our delicious delicacies, intercontinental dishes, and mouth-watering pastries</p>
+            <div class="hero-buttons">
+                <a href="menu.html" class="btn btn-primary">View Our Menu</a>
+                <a href="menu.html#order" class="btn btn-secondary">Order Now</a>
+            </div>
+        </div>
+        <div class="hero-shapes">
+            <div class="shape shape1"></div>
+            <div class="shape shape2"></div>
+            <div class="shape shape3"></div>
+        </div>
+    </section>
+
+    <section class="carousel-section">
+        <div class="carousel-container">
+            <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Jollof_Rice_with_Stew.jpg/800px-Jollof_Rice_with_Stew.jpg" alt="Jollof Rice">
+                    <div class="carousel-caption">Authentic Jollof Rice</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?w=800&h=500&fit=crop" alt="African Dishes">
+                    <div class="carousel-caption">Traditional African Delicacies</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&h=500&fit=crop" alt="Burgers">
+                    <div class="carousel-caption">Delicious Burgers</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://fishandmeat.hk/wp-content/uploads/2025/05/arabic-chicken-shawarma-sandwich-recipe-1747792750.jpg" alt="Croissants">
+                    <div class="carousel-caption">Tasty Shawarmas</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://yellowplate.ng/wp-content/uploads/2021/01/mg_2391.jpeg" style="max-width: 1000px;" alt="Pounded Yam">
+                    <div class="carousel-caption">Asun Spaghetti</div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://thecookingfoodie.com/wp-content/uploads/2019/11/IMG_6832-767x576.jpg" alt="Pastries">
+                    <div class="carousel-caption">Fresh Pastries</div>
+                </div>
+            </div>
+            <button class="carousel-btn carousel-btn-prev" onclick="moveCarousel(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn carousel-btn-next" onclick="moveCarousel(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>African Delicacies</h3>
+                    <p>Authentic traditional dishes prepared with love and the finest ingredients</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe-africa"></i>
+                    </div>
+                    <h3>Intercontinental Dishes</h3>
+                    <p>A diverse selection of international flavors to satisfy every palate</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <h3>Fresh Pastries</h3>
+                    <p>Delicious pastries baked fresh daily for your enjoyment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About <span>Meddy's Africana Buka</span></h2>
+                    <p>At Meddy's Africana Buka, we bring you the authentic taste of Africa combined with international favorites. Our passion is to serve delicious, home-style African cuisine that reminds you of home while introducing new flavors to adventurous food lovers.</p>
+                    <p>With three convenient locations across Lagos, we're committed to providing exceptional food quality, warm hospitality, and a dining experience that celebrates the rich culinary heritage of Africa.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>3</h3>
+                            <p>Branches</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100+</h3>
+                            <p>Menu Items</p>
+                        </div>
+                        <div class="stat">
+                            <h3>1000+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Jollof_Rice_with_Stew.jpg/800px-Jollof_Rice_with_Stew.jpg" alt="African cuisine">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews-section">
+        <div class="container">
+            <h2 class="section-title">What Our <span>Customers Say</span></h2>
+            <p class="section-subtitle">Real reviews from satisfied customers</p>
+            
+            <div class="reviews-slider">
+                <div class="reviews-track" id="reviewsTrack">
+                    <div class="review-card">
+                        <div class="review-content">
+                            <div class="review-quote">"</div>
+                            <p class="review-text">The best Jollof rice I've ever had! The flavors are authentic and remind me of home. I order from Meddy's Africana Buka at least twice a week. Their delivery is also very prompt!</p>
+                            <div class="review-author">
+                                <div class="review-author-img">A</div>
+                                <div class="review-author-info">
+                                    <h4>Adebayo Johnson</h4>
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-content">
+                            <div class="review-quote">"</div>
+                            <p class="review-text">Meddy's has become my go-to spot for African cuisine! The pounded yam and egusi soup is always on point. The portions are generous and the prices are very reasonable. Highly recommended!</p>
+                            <div class="review-author">
+                                <div class="review-author-img">C</div>
+                                <div class="review-author-info">
+                                    <h4>Chioma Okafor</h4>
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-content">
+                            <div class="review-quote">"</div>
+                            <p class="review-text">Their pastries are amazing! Fresh meat pies, chicken pies, and croissants that taste like they're straight from heaven. The Egbeda branch staff are also very friendly and welcoming.</p>
+                            <div class="review-author">
+                                <div class="review-author-img">O</div>
+                                <div class="review-author-info">
+                                    <h4>Oluwatosin Bello</h4>
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-content">
+                            <div class="review-quote">"</div>
+                            <p class="review-text">I love the variety at Meddy's! From traditional African dishes to intercontinental meals, everything is delicious. The WhatsApp ordering system is so convenient. My family and I are regular customers!</p>
+                            <div class="review-author">
+                                <div class="review-author-img">E</div>
+                                <div class="review-author-info">
+                                    <h4>Emmanuel Udoh</h4>
+                                    <div class="review-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-dots" id="reviewDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="branches" class="branches">
+        <div class="container">
+            <h2 class="section-title">Our <span>Branches</span></h2>
+            <p class="section-subtitle">Visit us at any of our three convenient locations</p>
+            <div class="branches-grid">
+                <div class="branch-card">
+                    <div class="branch-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Egbeda Branch</h3>
+                    <p class="branch-address">Egbeda, Lagos State</p>
+                    <p class="branch-hours"><i class="far fa-clock"></i> Open Daily: 8AM - 10PM</p>
+                    <a href="tel:+2348012345678" class="branch-phone"><i class="fas fa-phone"></i> 0801 234 5678</a>
+                </div>
+                <div class="branch-card">
+                    <div class="branch-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Cement Bus Stop</h3>
+                    <p class="branch-address">Cement Bus Stop, Lagos State</p>
+                    <p class="branch-hours"><i class="far fa-clock"></i> Open Daily: 8AM - 10PM</p>
+                    <a href="tel:+2348012345679" class="branch-phone"><i class="fas fa-phone"></i> 0801 234 5679</a>
+                </div>
+                <div class="branch-card">
+                    <div class="branch-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Baruwa Branch</h3>
+                    <p class="branch-address">Baruwa, Lagos State</p>
+                    <p class="branch-hours"><i class="far fa-clock"></i> Open Daily: 8AM - 10PM</p>
+                    <a href="tel:+2348012345680" class="branch-phone"><i class="fas fa-phone"></i> 0801 234 5680</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in <span>Touch</span></h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>0801 234 5678</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>info@meddysafricanabuka.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>0812 762 9913</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Meddy's Africana Buka. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
