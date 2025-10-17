@@ -293,7 +293,25 @@ function handleOrderSubmit(e) {
     
     orderMessage += `_Thank you for ordering from Meddy's Africana Buka!_`;
     
-    const whatsappNumber = '2348127629913';
+    let branchValue = document.getElementById('branch').value;
+
+    let whatsappNumber;
+    
+    switch (branchValue) {
+            case "Egbeda":
+                whatsappNumber = '2348166634363';
+                break;
+            case "Baruwa":
+                whatsappNumber = '2348127629913';
+                break;
+            case "Cement Bus Stop":
+                whatsappNumber = '2347073569696';
+                break;
+            default:
+                whatsappNumber = '2348127629913';
+    };
+
+    //const whatsappNumber = '2348127629913';
     const encodedMessage = encodeURIComponent(orderMessage);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     
